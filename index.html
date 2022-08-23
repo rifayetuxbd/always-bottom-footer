@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header - Main Content and Footer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Courier New', Courier, monospace;
+        }
+
+        body {
+            background-color: rgb(17, 29, 40);
+            color: white;
+        }
+
+        #root {
+            width: 100%;
+            /* ------- */
+            height: 100vh;
+            /* We can use min-height here. Then don't need to use the "flex-shrink: 0" for heder, main and footer */
+            /* ------- */
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+
+        .header {
+            height: 64px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main {
+            background-color: azure;
+            color: darkblue;
+            flex-grow: 1;
+
+            padding: 20px;
+        }
+
+        .footer {
+            height: 80px;
+            border-top: 1px solid gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header,
+        .main,
+        .footer {
+            flex-shrink: 0;
+            /* 
+            When root height is set to 100vh instead of min-height,
+            It takes the default value "flex-shrink: 0;";
+
+            In that case header and footer will look wired when main
+            has content that needs a scrollbar
+
+            To avoid it either use "min-height: 100vh" instead of height
+            OR
+            for header, main, and footer use "flex-shrink: 0"
+            */
+        }
+
+        .text-center {
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <!-- Navbar Here -->
+        <header class="header">
+            Navbar
+        </header>
+
+        <!-- Main Content Here -->
+        <main class="main">
+            <p class="text-center">Main Content</p>
+
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur molestias nemo quaerat excepturi non
+                aspernatur, voluptatem iure itaque autem vel, dolores in eius quibusdam aliquid eum, dolorum deleniti
+                assumenda necessitatibus.
+                Illo itaque, iure qui vero quia temporibus quos accusantium doloribus voluptate nemo quod, esse aperiam
+                id dolor aut. Deserunt repudiandae sed minima amet facere maiores ad accusamus quae eum quasi?
+                Quis sapiente aperiam ipsum eligendi similique quisquam sint explicabo quaerat commodi voluptates sit
+                fuga dignissimos, temporibus molestias in facere animi perferendis magnam et velit illo? Nisi quidem
+                similique incidunt beatae?
+                Hic sunt voluptates optio earum possimus natus repudiandae, tempore quibusdam error voluptatibus aliquid
+                quis similique totam! Eaque at, magni veniam ad distinctio quas aliquam ipsum aperiam animi blanditiis
+                pariatur nam!
+                Iusto, dolorum. Unde est doloremque enim! Dolorem impedit temporibus velit quibusdam incidunt. Quae,
+                maxime animi molestiae, magnam atque earum numquam dicta exercitationem excepturi aliquam, adipisci
+                rerum commodi consequatur. Assumenda, fugit!
+                Iure itaque quae dicta laborum pariatur enim voluptas accusamus inventore libero porro quia aut ipsam
+                sequi ducimus cum, soluta quibusdam obcaecati optio, consequuntur cumque nesciunt eos corporis. Dolorem,
+                error ipsum.
+                Cum atque voluptatem doloremque. Accusamus doloremque repellat voluptatibus earum nulla labore eos
+                quisquam! Praesentium natus dicta ipsa, ullam assumenda facilis, vel nesciunt deleniti harum, commodi
+                suscipit dolor itaque error maiores.
+                Suscipit molestias facere, labore temporibus error quam aspernatur iure mollitia quas similique alias
+                cum. Adipisci nam officiis unde. Est quaerat dolorem sint omnis repellendus placeat illo maxime natus
+                cupiditate laudantium.
+                Molestiae eum, voluptatem cum omnis doloremque blanditiis, iste dolore sequi deleniti quibusdam
+                perspiciatis non? Eum velit quibusdam eveniet laudantium pariatur qui, quod possimus voluptatum,
+                incidunt harum dignissimos rem. Animi, autem!
+                Itaque, quod? Consequatur, consectetur excepturi assumenda sint id doloribus in culpa cum ea itaque
+                alias officiis inventore, accusamus magni porro cumque. Amet voluptates blanditiis iste recusandae est
+                ex quae nihil.
+            </p>
+
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, laborum ipsa perferendis amet harum
+                minus iste, quibusdam voluptas vitae placeat sit possimus ullam ex at fuga! Nulla ipsa maiores aliquam?
+                Error consequatur, tempora porro sed odit culpa facere amet veniam ipsa unde eius eveniet pariatur iure
+                cum magni vitae nesciunt facilis mollitia odio nulla, ipsam maiores minima? Architecto, sint
+                reprehenderit.
+                Incidunt nesciunt est hic laborum tenetur dolor numquam distinctio illo, aperiam recusandae? Quisquam,
+                vitae blanditiis. Corporis animi explicabo excepturi optio error a praesentium corrupti dicta, harum
+                sint voluptate maiores architecto?
+                Doloribus dolor repellat vero corporis fuga optio non recusandae fugiat ea qui dicta sint accusantium
+                incidunt odio ab iure ipsum accusamus, laboriosam minus similique voluptatum, tempore culpa. Magni,
+                temporibus nam.
+                Amet, vitae obcaecati cum nam molestiae id fugiat excepturi nobis quidem illum asperiores beatae in
+                perspiciatis consequuntur, omnis ex quae ipsum error optio sit provident voluptate fuga dolores. Ex,
+                officiis.
+                Odio facilis eum eius officiis minima blanditiis quis ut quidem consectetur? Eius deserunt, enim id
+                molestias commodi quidem non. Dignissimos nihil ipsam deleniti tempore quae repellat, vero ullam quaerat
+                sit?
+                Voluptas, reprehenderit animi officiis tempora suscipit necessitatibus vero labore omnis veniam sunt
+                iusto at deleniti fugit aperiam eius debitis nulla laboriosam aliquam explicabo numquam excepturi saepe
+                incidunt ex. Corporis, rerum?
+                Assumenda, atque id suscipit nemo voluptatibus corporis voluptatem incidunt magnam. Soluta, odit tenetur
+                aperiam quis ipsa vel ipsum alias obcaecati hic optio, modi voluptas tempora fuga nam? Veritatis, sint
+                quaerat.
+                Perferendis quam nobis quibusdam voluptate quasi, accusantium necessitatibus commodi porro architecto
+                quo vel soluta possimus modi tenetur esse sequi! Vel eveniet, consectetur sint iusto harum placeat eum
+                dolores minus quibusdam.
+                Ipsa, voluptas. Ratione maiores, corrupti ducimus illo atque, vitae incidunt nostrum cupiditate ipsam
+                expedita in. Doloremque officia eos ad soluta, reiciendis pariatur eaque totam accusantium facere unde
+                excepturi ut non?
+            </p>
+        </main>
+
+        <!-- Footer Here -->
+        <footer class="footer">
+            Footer
+        </footer>
+    </div>
+</body>
+
+</html>
